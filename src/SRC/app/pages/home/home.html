@@ -1,0 +1,20 @@
+<div class="page-card">
+  <h1>Home</h1>
+  <hr>
+
+  <h2>Welcome!</h2>
+  <p class="subtle">This portal pulls remote records and shares them across pages.</p>
+
+  <hr>
+
+  <h2>Latest Updates</h2>
+
+  <div *ngIf="data.loading$ | async" class="subtle">Loading latest updates...</div>
+
+  <ul *ngIf="latest$ | async as latest">
+    <li *ngFor="let post of latest" style="margin: 12px 0;">
+      <b>{{ post.title | uppercase }}</b>
+      <div class="subtle">{{ post.body | truncate:90 }}</div>
+    </li>
+  </ul>
+</div>

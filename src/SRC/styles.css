@@ -1,0 +1,163 @@
+/* ========= GLOBAL BASE (matches screenshot) ========= */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #eef2f7; /* light gray-blue */
+  color: #2c3e50;
+  font-size: 16px; /* good for 1080p */
+}
+
+h1 {
+  color: #2c3e50;
+  font-weight: 800;
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+
+h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e6eaf0;
+  margin: 12px 0;
+}
+
+.subtle {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ========= PAGE CARD (white boxed panels) ========= */
+.page-card {
+  background: #fff;
+  border: 1px solid #e6eaf0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-top: 18px;
+}
+
+/* ========= SEARCH INPUT (Services) ========= */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d6dde8;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+}
+
+.search:focus {
+  border-color: #4b86ff;
+  box-shadow: 0 0 0 3px rgba(75, 134, 255, 0.15);
+}
+
+/* ========= ERROR BANNER (Services) ========= */
+.alert-error {
+  margin-top: 12px;
+  background: #f7e8ea;
+  border: 1px solid #e5b7bd;
+  color: #7a1d1d;
+  padding: 12px 14px;
+  border-radius: 6px;
+}
+
+/* ========= SUCCESS BANNER (Contact) ========= */
+.success-banner {
+  margin-top: 12px;
+  background: #e7f4ee;
+  border: 1px solid #b8e3cd;
+  color: #1f5138;
+  padding: 12px 14px;
+  border-radius: 6px;
+}
+
+/* ========= TABLE (matches screenshot) ========= */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 12px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  background-color: #3a3f46;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f4f8;
+}
+
+tr:hover {
+  background-color: #dce6f1;
+}
+
+/* ========= CONTACT FORM ========= */
+.form-grid label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+.form-grid input,
+.form-grid textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d6dde8;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus {
+  border-color: #4b86ff;
+  box-shadow: 0 0 0 3px rgba(75, 134, 255, 0.15);
+}
+
+.btn {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2f3339;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========= 1080p layout tuning ========= */
+@media (min-width: 1280px) {
+  .page-card {
+    padding: 26px;
+  }
+
+  table th,
+  table td {
+    padding: 14px 18px;
+  }
+}

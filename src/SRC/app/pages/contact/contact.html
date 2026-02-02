@@ -1,0 +1,27 @@
+<div class="page-card">
+  <h1>Contact</h1>
+  <hr>
+
+  <h2>Form Preview</h2>
+
+  <form class="form-grid" [formGroup]="form" (ngSubmit)="submit()">
+    <label>Name *</label>
+    <input type="text" formControlName="name" />
+
+    <label>Email *</label>
+    <input type="email" formControlName="email" />
+
+    <label>Message</label>
+    <textarea rows="4" formControlName="message"></textarea>
+
+    <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+
+  <div class="page-card" style="margin-top: 14px; background: #f8fafc;">
+    <p><b>Name:</b> {{ form.value.name | uppercase }}</p>
+    <p><b>Email:</b> {{ form.value.email }}</p>
+    <p><b>Message:</b> {{ form.value.message | truncate:120 }}</p>
+
+    <div *ngIf="submitted" class="success-banner">✅ Submitted! (demo only).</div>
+  </div>
+</div>
