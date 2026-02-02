@@ -1,0 +1,36 @@
+<div class="page-card">
+  <h1>Services</h1>
+  <hr>
+
+  <input class="search" type="text" [formControl]="search" placeholder="Search by title or body..." />
+
+  <hr>
+
+  <div *ngIf="data.loading$ | async" class="subtle">Loading service records...</div>
+
+  <div *ngIf="data.error$ | async as err">
+    <div *ngIf="err" class="alert-error">❗ {{ err }}</div>
+  </div>
+
+  <div *ngIf="filtered$ | async as posts">
+    <p class="subtle">Showing <b>{{ posts.length }}</b> records</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 80px;">ID</th>
+          <th>Title</th>
+          <th>Preview</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of posts">
+          <td>{{ p.id }}</td>
+          <td>{{ p.title | uppercase }}</td>
+          <td>{{ p.body | truncate:110 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

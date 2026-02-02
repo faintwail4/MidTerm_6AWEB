@@ -1,0 +1,36 @@
+/* src/app/app.css */
+.navbar {
+  height: 52px;
+  background: #3b3f45;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.links a {
+  color: #d9e2ef;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+  padding-bottom: 6px;
+}
+
+/* Requirement: Blue underline for active page */
+.links a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #4b86ff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+}
