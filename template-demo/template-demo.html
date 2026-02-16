@@ -1,0 +1,79 @@
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div class="mb-3">
+    <label>Username:</label>
+    <input
+      class="input-box"
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      placeholder="Enter username"
+      required>
+  </div>
+
+  <div class="mb-3">
+    <label>Email:</label>
+    <input
+      class="input-box"
+      type="email"
+      name="email"
+      [(ngModel)]="email"
+      placeholder="Enter email"
+      required
+      email>
+  </div>
+
+  <div class="mb-3">
+    <label>Password:</label>
+    <input
+      class="input-box"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      placeholder="Enter password"
+      required
+      minlength="6">
+  </div>
+
+  <div class="mb-3">
+    <label>Role:</label>
+    <select
+      class="input-box"
+      name="role"
+      [(ngModel)]="role"
+      required>
+      <option value="" disabled selected>Select role</option>
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+      <option value="guest">Guest</option>
+    </select>
+  </div>
+
+  <input
+    class="btn"
+    type="submit"
+    value="Submit"
+    [disabled]="!myForm.valid">
+
+    <div class="mb-3">
+  <label>Gender:</label><br>
+  <input type="radio" name="gender" [(ngModel)]="gender" value="Male"> Male
+  <input type="radio" name="gender" [(ngModel)]="gender" value="Female"> Female
+</div>
+
+<div class="mb-3">
+  <label>Status:</label>
+  <select class="input-box" name="status" [(ngModel)]="status" required>
+    <option value="Permanent">Permanent</option>
+    <option value="Probationary">Probationary</option>
+  </select>
+</div>
+
+<div class="mb-3">
+  <label>Comments:</label>
+  <textarea class="input-box" name="comments" [(ngModel)]="comments"></textarea>
+</div>
+
+</form>
+
